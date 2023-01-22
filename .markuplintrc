@@ -1,0 +1,37 @@
+{
+  "parser": {
+    ".svelte$": "@markuplint/svelte-parser"
+  },
+  "rules": {
+    "attr-value-quotes": false,
+    "attr-duplication": true,
+    "doctype": "always",
+    "no-use-event-handler-attr": false,
+    "no-empty-palpable-content": false,
+    "label-has-control": false,
+    "id-duplication": true,
+    "no-hard-code-id": false,
+    "case-sensitive-attr-name": false,
+    "require-datetime": true,
+    "required-h1": true,
+    "deprecated-element": true,
+    "landmark-roles": false,
+    "case-sensitive-tag-name": false,
+    "end-tag": false,
+    "deprecated-attr": true,
+    "wai-aria": true,
+    "invalid-attr": true,
+    "class-naming": false,
+    "require-accessible-name": true,
+    "permitted-contents": true,
+    "disallowed-element": true,
+    "character-reference": true,
+    "no-default-value": false,
+    "no-boolean-attr-value": false,
+    "ineffective-attr": false,
+    "required-element": true,
+    "no-refer-to-non-existent-id": true,
+    "use-list": false,
+    "required-attr": true
+  }
+}
