@@ -5,5 +5,5 @@
 		"stylelint-config-prettier",
 		"stylelint-config-html/svelte"
 	],
-	"plugins": ["stylelint-order"],
+	"plugins": ["stylelint-order"]
 }
