@@ -23,6 +23,7 @@ specifiers:
   stylelint-config-standard: ^29.0.0
   svelte: ^3.54.0
   svelte-check: ^3.0.1
+  svelte-markdown: ^0.2.3
   tslib: ^2.4.1
   typescript: ^4.9.3
   vite: ^4.0.0
@@ -51,6 +52,7 @@ devDependencies:
   stylelint-config-standard: 29.0.0_stylelint@14.16.1
   svelte: 3.55.1
   svelte-check: 3.0.2_svelte@3.55.1
+  svelte-markdown: 0.2.3_svelte@3.55.1
   tslib: 2.4.1
   typescript: 4.9.4
   vite: 4.0.4
@@ -654,6 +656,10 @@ packages:
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
+    dev: true
+
+  /@types/marked/4.0.8:
+    resolution: {integrity: sha512-HVNzMT5QlWCOdeuBsgXP8EZzKUf0+AXzN+sLmjvaB3ZlLqO+e4u0uXrdw9ub69wBKFs+c6/pA4r9sy6cCDvImw==}
     dev: true
 
   /@types/minimist/1.2.2:
@@ -2176,6 +2182,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /marked/4.2.12:
+    resolution: {integrity: sha512-yr8hSKa3Fv4D3jdZmtMMPghgVt6TWbk86WQaWhDloQjRSQhMMYCAro7jP7VDJrjjdV8pxVxMssXS8B8Y5DZ5aw==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: true
+
   /markuplint/3.1.0:
     resolution: {integrity: sha512-GVuSauJw8BUlpwcNXH4yGyK1oh9jPavSNmahWgC/gTPCKlZL/eZSSYf8dxnOAMFKTTh1KNoIxxrEDk2JsAwx0Q==}
     hasBin: true
@@ -3127,6 +3139,16 @@ packages:
     peerDependencies:
       svelte: '>=3.19.0'
     dependencies:
+      svelte: 3.55.1
+    dev: true
+
+  /svelte-markdown/0.2.3_svelte@3.55.1:
+    resolution: {integrity: sha512-2h680NzTXnAD0CXhxe3GeHl6W+ayG4iKQRl+BIDRw+R0mUE0OiNxP1Vt8Rn+aWevB/LBiBIPCAwvL+0BkG057A==}
+    peerDependencies:
+      svelte: ^3.0.0
+    dependencies:
+      '@types/marked': 4.0.8
+      marked: 4.2.12
       svelte: 3.55.1
     dev: true
 
