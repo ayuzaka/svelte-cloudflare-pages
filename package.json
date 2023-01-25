@@ -2,6 +2,7 @@
 	"name": "svelte-cloudflare-pages",
 	"version": "0.0.1",
 	"private": true,
+	"packageManager": "pnpm@7.26.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
