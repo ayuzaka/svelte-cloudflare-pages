@@ -18,14 +18,30 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Cache npm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        id: pnpm-install
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys:
-            ${{ runner.os }}-node-
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Run lint
-        run: npm run lint
-
+        run: |
+          pnpm run lint
+          pnpm run check
