@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Portal from '../../lib/components/Portal.svelte';
+	import Portal from '$lib/components/Portal.svelte';
 
 	let displayPortal = false;
 
